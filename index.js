@@ -50,7 +50,7 @@ const nextRound = () => {
   round += 1;
   if (health1 <= 0) score2 += 1;
   else score1 += 1;
-  if (round == 6) {
+  if (round == 6 || score1 >= 3 || score2 >= 3) {
     gameOver();
     updateState(health1, health2, score1, score2, round - 1);
     return;
