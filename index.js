@@ -48,7 +48,7 @@ playerTwoBtn.addEventListener("click", (e) => {
 const nextRound = () => {
   // alert(`round ${round} over`);
   round += 1;
-  if (round == 3) {
+  if (round == 6) {
     gameOver();
     return;
   }
@@ -111,5 +111,5 @@ const gameOver = () => {
 };
 
 const randomNumber = () => {
-  return Math.floor((Math.random() * 1000) % 70);
+  return Math.floor((Math.random() * 1000) % 20);
 };
