@@ -48,6 +48,8 @@ playerTwoBtn.addEventListener("click", (e) => {
 const nextRound = () => {
   // alert(`round ${round} over`);
   round += 1;
+  if (health1 <= 0) score2 += 1;
+  else score1 += 1;
   if (round == 6) {
     gameOver();
     if (health1 > 0) score1 += 1;
@@ -55,8 +57,6 @@ const nextRound = () => {
     updateState(health1, health2, score1, score2, round - 1);
     return;
   }
-  if (health1 <= 0) score2 += 1;
-  else score1 += 1;
   roundEl.textContent = `Round #${round}`;
   health1 = 100;
   health2 = 100;
